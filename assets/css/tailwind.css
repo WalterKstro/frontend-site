@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Montserrat:wght@400;700;900&display=swap');
+
+*{
+    --font-size-sm: clamp(0.8rem, -0.09vw + 0.82rem, 0.75rem);
+    --font-size-base: clamp(1rem, 0vw + 1rem, 1rem);
+    --font-size-md: clamp(1.25rem, 0.16vw + 1.22rem, 1.33rem);
+    --font-size-lg: clamp(1.56rem, 0.4vw + 1.49rem, 1.78rem);
+    --font-size-xl: clamp(1.95rem, 0.78vw + 1.81rem, 2.37rem);
+    --font-size-xxl: clamp(2.44rem, 1.34vw + 2.2rem, 3.16rem);
+    --font-size-xxxl: clamp(3.05rem, 2.17vw + 2.67rem, 4.21rem);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; @apply leading-none}
+    p{ font-family: 'Inter', sans-serif; font-size: var(--font-size-md);}
+
+    h1{font-size: var(--font-size-xxxl);}
+    h2{font-size: var(--font-size-xxl);}
+    h3{font-size: var(--font-size-xl);}
+    h4{font-size: var(--font-size-lg);}
+}
