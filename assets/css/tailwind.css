@@ -16,10 +16,12 @@
 
 @layer base {
     h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; @apply leading-none}
-    p{ font-family: 'Inter', sans-serif; font-size: var(--font-size-md);}
+    p,a,ul,li{ font-family: 'Inter', sans-serif;}
+    p{ font-size: var(--font-size-md);}
 
     h1{font-size: var(--font-size-xxxl);}
     h2{font-size: var(--font-size-xxl);}
     h3{font-size: var(--font-size-xl);}
     h4{font-size: var(--font-size-lg);}
 }
+.active{@apply text-orange font-semibold}
