@@ -1,9 +1,7 @@
 <template>
-    <div 
+    <div class=" bg-darken/50 w-full fixed top-0 bottom-0 z-40
+                   md:static"
     :class="showOrHiddenMenu"
-    class=" bg-darken/50 w-full fixed top-0 bottom-0
-    md:static
-    "
     @click="() => swicherStateMenuMobile = false">
         <Nav/>
     </div>

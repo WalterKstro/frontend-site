@@ -6,6 +6,9 @@ module.exports = {
             'darken': '#0A0909',
             'orange': '#ED7A3C',
             'light': '#E2E2E9',
+        },
+        gridTemplateRows: {
+            '12':'repeat(3, minmax(0, auto))'
         }
     },  
     plugins: [],

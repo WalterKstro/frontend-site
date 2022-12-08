@@ -2,9 +2,7 @@
 <template>
     <header class="bg-dark">
         <Container>
-            <div 
-            class="flex flex-wrap justify-between py-3 gap-4 items-center
-            ">
+            <div class="flex flex-wrap justify-between py-3 gap-4 items-center">
                 <Brand/>
                 <Networks class="md:order-2"/>
                 <Menu/>

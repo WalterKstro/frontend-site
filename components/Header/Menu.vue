@@ -1,11 +1,11 @@
 <template>
     <div>
-        <Button @click="showOrHiddenMenu"/>
+        <Burger @click="showOrHiddenMenu"/>
         <Navigaitor/>
     </div>
 </template>
 <script setup>
-    const Button = defineAsyncComponent(()=>import('./Button.vue'))
+    const Burger = defineAsyncComponent(()=>import('./Burger.vue'))
     const Navigaitor = defineAsyncComponent(()=>import('./Navigaitor.vue'))
 
     const swicherStateMenuMobile = inject('swicherStateMenuMobile')

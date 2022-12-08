@@ -1,12 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/tailwindcss','@nuxt/image-edge','@nuxtjs/apollo','nuxt-icon'],
+    modules: ['@nuxtjs/tailwindcss','@nuxt/image-edge','@nuxtjs/apollo','nuxt-icon','nuxt-svgo'],
     apollo: {
         clients: {
             default: {
-                httpEndpoint: 'https://graphql.contentful.com/content/v1/spaces/lco53k7tma7a?access_token=U-8FsjTxYtJIMrKKGsz-Ae4zS-EZ3oCenI2Q7mP5D2Q',
+                httpEndpoint: `${process.env.NUXT_PUBLIC_API_BASE}content/v1/spaces/${process.env.NUXT_SPACE}?access_token=${process.env.NUXT_ACCESS_TOKEN}`,
             }
-        }
+        },
     },
     tailwindcss: {
         cssPath: '~/assets/css/tailwind.css',
