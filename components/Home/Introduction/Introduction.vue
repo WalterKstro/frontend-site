@@ -26,6 +26,9 @@
                             lg:col-span-5 lg:row-start-3"><Button text="Ver mi perfil" :path="{name:'perfil'}"/></div>
             </div>
         </LayoutContainer>
+        <Technologies class="absolute -bottom-20 md:-bottom-16 bg-dark text-light rounded-lg py-4 -translate-x-1/2 left-1/2 max-w-3xl min-[320px]:
+                            w-full
+                            lg:py-8"/>
     </section>
 </template>
 
@@ -33,6 +36,7 @@
     import HeroBackground from '~/assets/img/hero background.svg';
 
     const LayoutContainer = defineAsyncComponent(()=>import('../../Layout/Container.vue'));
+    const Technologies = defineAsyncComponent(()=>import('~/components/Home/Introduction/Technologies.vue'));
     
     defineProps({
         name:String,
