@@ -14,5 +14,8 @@
     "nuxt": "3.0.0",
     "nuxt-icon": "^0.1.7",
     "nuxt-svgo": "^1.1.0"
+  },
+  "dependencies": {
+    "skeleton-elements": "^4.0.1"
   }
 }
