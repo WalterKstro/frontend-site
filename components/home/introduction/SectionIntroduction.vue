@@ -2,7 +2,7 @@
     <section class="py-16 bg-gradient-to-b from-dark to-darken relative
                     md:py-24
                     lg:py-40">
-        <HeroBackground class="absolute right-0 top-0 animate-pulse"/>
+        <HeroBackground class="absolute right-0 top-0"/>
         <LayoutContainer>
             <div class="grid grid-cols-2 gap-x-4 relative
                         md:grid-cols-6 md:gap-x-6
@@ -28,11 +28,4 @@
 
     const LayoutContainer = defineAsyncComponent(()=>import('../../Layout/Container.vue'));
     const Technologies = defineAsyncComponent(()=>import('~/components/home/introduction/Technologies.vue'));
-    defineProps(['pending'])
-    // defineProps({
-    //     name:String,
-    //     position:String,
-    //     extract:String,
-    //     greeting:String,
-    // })
 </script>
