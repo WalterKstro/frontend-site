@@ -20,11 +20,14 @@
                     lg:col-span-5 lg:row-start-2"><p>{{ data?.homePage.extract }}</p></div>
         </template>
     </SectionIntroduction>
+
+    <SectionProjects :images="images"/>
 </template>
 <script lang="ts" setup>
     import { HomePage } from '../Interfaces/Interfaces';
     import { homeQuery } from '../queries/homePage';
     const SectionIntroduction = defineAsyncComponent(()=>import('../components/home/introduction/SectionIntroduction.vue'));
+    const SectionProjects = defineAsyncComponent(()=>import('~/components/home/projects/SectionProjects.vue'));
     const LazyTitle = defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Titles.vue'));
     const LazyExtract = defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Extract.vue'));
 
@@ -32,4 +35,5 @@
         title:'Inicio'
     })
     const { data,pending } = await useLazyAsyncQuery<HomePage>(homeQuery);
+    const images = data.value?.homePage.imagesCollection.items
 </script>

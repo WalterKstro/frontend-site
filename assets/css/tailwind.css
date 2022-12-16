@@ -15,6 +15,7 @@
 @tailwind utilities;
 
 @layer base {
+    body{@apply bg-light }
     h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; @apply leading-none}
     p,a,ul,li{ font-family: 'Inter', sans-serif;}
     p{ font-size: var(--font-size-base);}
