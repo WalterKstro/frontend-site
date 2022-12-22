@@ -9,9 +9,9 @@
             <div class="col-span-2 mb-8
                     md:col-span-4
                     lg:col-span-5">
-            <span class="block text-2xl md:text-3xl text-light">{{ data?.homePage.greeting }}</span>
+            <span class="block text-2xl md:text-3xl text-light font-titles font-semibold">{{ data?.homePage.greeting }}</span>
             <h1 class="font-bold text-orange">{{data?.homePage.name}}</h1>
-            <span class="block text-2xl md:text-3xl text-light">{{data?.homePage.position}}</span>
+            <span class="block text-2xl md:text-3xl text-light font-titles font-semibold">{{data?.homePage.position}}</span>
         </div>
         </template>
         <template #extract>
@@ -22,6 +22,7 @@
     </SectionIntroduction>
 
     <SectionProjects :images="images"/>
+    <HomeContactForm/>
 </template>
 <script lang="ts" setup>
     import { HomePage } from '../Interfaces/Interfaces';
@@ -30,6 +31,7 @@
     const SectionProjects = defineAsyncComponent(()=>import('~/components/home/projects/SectionProjects.vue'));
     const LazyTitle = defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Titles.vue'));
     const LazyExtract = defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Extract.vue'));
+    const HomeContactForm = defineAsyncComponent(()=>import('~/components/home/contact/Form.vue'))
 
     useHead({
         title:'Inicio'

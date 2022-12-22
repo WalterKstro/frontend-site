@@ -16,7 +16,7 @@
     "nuxt-svgo": "^1.1.0"
   },
   "dependencies": {
-    "skeleton-elements": "^4.0.1",
+    "@formkit/nuxt": "^1.0.0-beta.12",
     "swiper": "^8.4.5"
   }
 }

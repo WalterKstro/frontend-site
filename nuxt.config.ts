@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/tailwindcss','@nuxt/image-edge','@nuxtjs/apollo','nuxt-icon','nuxt-svgo'],
+    modules: ['@nuxtjs/tailwindcss','@nuxt/image-edge','@nuxtjs/apollo','nuxt-icon','nuxt-svgo','@formkit/nuxt'],
     apollo: {
         clients: {
             default: {
@@ -12,6 +12,6 @@ export default defineNuxtConfig({
     tailwindcss: {
         cssPath: '~/assets/css/tailwind.css',
         configPath: 'tailwind.config',
-        viewer: false,
+        viewer: false
     },
 })
