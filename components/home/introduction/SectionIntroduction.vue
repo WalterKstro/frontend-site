@@ -11,10 +11,6 @@
                             md:col-span-4
                             lg:col-span-5 lg:row-start-3"><Button text="Ver mi perfil" :path="{name:'perfil'}"/></div>
             </LayoutGrid>
-
-            <Technologies class="absolute -bottom-20 bg-dark text-light rounded-lg py-4 -translate-x-1/2 left-1/2 max-w-3xl min-[320px] w-full
-                          md:-bottom-16
-                          lg:py-8"/>
         </LayoutContainer>
         
     </section>
@@ -25,6 +21,6 @@
 
     const LayoutContainer = defineAsyncComponent(()=>import('../../Layout/Container.vue'));
     const LayoutGrid = defineAsyncComponent(()=>import('~/components/Layout/Grid.vue'));
-    const Technologies = defineAsyncComponent(()=>import('~/components/home/introduction/Technologies.vue'));
+    
     
 </script>

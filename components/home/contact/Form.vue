@@ -7,7 +7,7 @@
                     type="form"
                     @submit="handlerSubmit"
                     :classes="{
-                        form:'col-start-1 col-span-2 md:col-start-2 md:col-span-4 lg:col-start-4 lg:col-span-6 lg:grid lg:grid-cols-6 lg:gap-6'
+                        form:'col-start-1 col-span-2 md:col-start-2 md:col-span-4 lg:col-start-4 lg:col-span-6 grid gap-6 sm:grid-cols-1 lg:grid-cols-6'
                     }"
                     :actions="false"
                     #default="{ state: { valid } }"
@@ -22,7 +22,7 @@
                             :classes="{
                                 outer:'$reset lg:col-start-1 lg:col-span-3',
                                 label: 'block text-light mb-4',
-                                input:'block w-full p-2 rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500',
+                                input:'bg-light block w-full p-2.5 rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500',
                                 messages:'text-light text-sm'
                             }"
                             />
@@ -40,7 +40,7 @@
                             :classes="{
                                 outer:'$reset lg:col-start-4 lg:col-span-3 lg:m-0',
                                 label: 'block text-light mb-4',
-                                input:'block w-full p-2 rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500',
+                                input:'bg-light block w-full p-2.5 rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500',
                                 messages:'text-light text-sm'
                             }"
                             />
@@ -56,7 +56,7 @@
                             :classes="{
                                 outer:'$reset lg:col-start-1 lg:col-span-6',
                                 label: 'block text-light mb-4',
-                                input:'block w-full p-2 rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500',
+                                input:'bg-light block w-full p-2.5 rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500',
                                 messages:'text-light text-sm'
                             }"
                             />

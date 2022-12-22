@@ -21,6 +21,7 @@
         </template>
     </SectionIntroduction>
 
+    <SectionTechnologies/>
     <SectionProjects :images="images"/>
     <HomeContactForm/>
 </template>
@@ -31,7 +32,8 @@
     const SectionProjects = defineAsyncComponent(()=>import('~/components/home/projects/SectionProjects.vue'));
     const LazyTitle = defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Titles.vue'));
     const LazyExtract = defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Extract.vue'));
-    const HomeContactForm = defineAsyncComponent(()=>import('~/components/home/contact/Form.vue'))
+    const HomeContactForm = defineAsyncComponent(()=>import('~/components/home/contact/Form.vue'));
+    const SectionTechnologies = defineAsyncComponent(()=>import('~/components/home/introduction/Technologies.vue'));
 
     useHead({
         title:'Inicio'
