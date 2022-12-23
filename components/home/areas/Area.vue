@@ -1,7 +1,7 @@
 <template>
-    <div class="p-4 bg-slate-100 rounded-lg lg:p-8 shadow-sm">
+    <div class="p-4  rounded-lg lg:p-8 shadow-sm bg-gradient-to-r from-slate-100 to-light">
         <slot name="title"></slot>
-        <ul class="list-disc list-inside">
+        <ul class="list-disc list-inside divide-y-2">
             <li v-for="item in items" :key="item">{{ item }}</li>
         </ul>
     </div>

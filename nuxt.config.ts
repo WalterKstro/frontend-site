@@ -13,5 +13,10 @@ export default defineNuxtConfig({
         cssPath: '~/assets/css/tailwind.css',
         configPath: 'tailwind.config',
         viewer: false
+    },
+    image: {
+        contentful: {
+            baseURL:'https://images.ctfassets.net'
+        }
     }
 })

@@ -1,5 +1,5 @@
 <template>
-    <section class="py-16 bg-gradient-to-b from-dark to-darken relative
+    <section class="py-16 bg-gradient-to-b from-dark to-darken
                     md:py-24
                     lg:py-40">
         <HeroBackground class="absolute right-0 top-0"/>

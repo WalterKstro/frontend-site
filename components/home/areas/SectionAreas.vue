@@ -1,10 +1,10 @@
 <template>
-    <section class="mb-16">
+    <section class="mb-16 lg:mb-48">
         <LayoutContainer>
             <LayoutGrid class="gap-y-4 md:gap-y-6">
                 <h3 class="col-start-1 col-span-2 font-semibold text-dark text-center
                            md:col-start-1 md:col-span-6
-                           lg:col-start-1 lg:col-span-12">En que areas puedo aportar</h3>
+                           lg:col-start-1 lg:col-span-12">En qué areas y qué puedo aportar</h3>
                <Area 
                     :items="functionsFrontend" 
                     class="col-start-1 col-span-2
