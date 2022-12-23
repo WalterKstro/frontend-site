@@ -21,23 +21,33 @@
         </template>
     </SectionIntroduction>
 
-    <SectionTechnologies/>
-    <SectionProjects :images="images"/>
+    <HomeSectionTechnologies/>
+    <HomeSectionProjects/>
+    <HomeAreasSectionAreas/>
     <HomeContactForm/>
 </template>
 <script lang="ts" setup>
-    import { HomePage } from '../Interfaces/Interfaces';
+    import { Data } from '../Interfaces/Interfaces';
     import { homeQuery } from '../queries/homePage';
+
     const SectionIntroduction = defineAsyncComponent(()=>import('../components/home/introduction/SectionIntroduction.vue'));
-    const SectionProjects = defineAsyncComponent(()=>import('~/components/home/projects/SectionProjects.vue'));
+    const HomeSectionProjects = defineAsyncComponent(()=>import('~/components/home/projects/SectionProjects.vue'));
     const LazyTitle = defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Titles.vue'));
     const LazyExtract = defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Extract.vue'));
     const HomeContactForm = defineAsyncComponent(()=>import('~/components/home/contact/Form.vue'));
-    const SectionTechnologies = defineAsyncComponent(()=>import('~/components/home/introduction/Technologies.vue'));
+    const HomeSectionTechnologies = defineAsyncComponent(()=>import('~/components/home/introduction/Technologies.vue'));
+    const HomeAreasSectionAreas = defineAsyncComponent(()=>import('~/components/home/areas/SectionAreas.vue'));
 
+    const { data,pending } = await useLazyAsyncQuery<Data>(homeQuery);
+    const images = data.value?.homePage.imagesCollection.items
+    const functionsFrontend = data.value?.homePage.frontend;
+    const functionsBackend = data.value?.homePage.backend;
+    
+    provide('functionsFrontend', functionsFrontend)
+    provide('functionsBackend', functionsBackend)
+    provide('images', images)
+    
     useHead({
         title:'Inicio'
     })
-    const { data,pending } = await useLazyAsyncQuery<HomePage>(homeQuery);
-    const images = data.value?.homePage.imagesCollection.items
 </script>

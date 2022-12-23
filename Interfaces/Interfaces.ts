@@ -1,4 +1,8 @@
-export interface HomePage {
+export interface Home {
+    data: Data;
+}
+
+export interface Data {
     homePage: HomePage;
 }
 
@@ -8,19 +12,15 @@ export interface HomePage {
     extract:          string;
     greeting:         string;
     description:      string;
+    frontend:         string[];
+    backend:          string[];
     imagesCollection: ImagesCollection;
-    __typename:       string;
 }
 
 export interface ImagesCollection {
-    items:      Item[];
-    __typename: string;
+    items: Item[];
 }
 
 export interface Item {
-    url:        string;
-    __typename: string;
+    url: string;
 }
-
-
-

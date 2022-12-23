@@ -10,7 +10,9 @@
             :space-between="50"
             :modules="[Pagination,Mousewheel]">
             effect="cards"
-            <swiper-slide v-for="({url}) in images" :key="url"><img class="rounded-lg" :src="url" alt="foto proyecto"></swiper-slide>
+            <swiper-slide v-for="({url}) in images" :key="url">
+                <nuxt-img :src="url" class="rounded-lg" placeholder/>
+            </swiper-slide>
         </swiper>
     </div>
 </template>
@@ -20,5 +22,5 @@
     import { Swiper, SwiperSlide } from 'swiper/vue';
     import {Pagination,Mousewheel} from 'swiper'
     import 'swiper/css/bundle';
-    defineProps(['images'])
+    const images = inject('images')
 </script>

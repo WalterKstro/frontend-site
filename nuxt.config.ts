@@ -14,4 +14,8 @@ export default defineNuxtConfig({
         configPath: 'tailwind.config',
         viewer: false
     },
+    image: {
+        domains:['images.ctfassets.net'],
+        contentful:{baseUrl:'https://graphql-mr.contentful.com '}
+    }
 })

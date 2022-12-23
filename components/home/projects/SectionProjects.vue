@@ -1,9 +1,9 @@
 <template>
-    <section class="py-16 my-20 bg-dark">
+    <section class="py-16 mb-16 bg-dark">
         <LayoutContainer>
             <LayoutGrid class="items-center">
                 <HomeProjectsExtract/>
-                <HomeProjectsSlider :images="images"/>
+                <HomeProjectsSlider/>
             </LayoutGrid>
         </LayoutContainer>
     </section>
@@ -14,12 +14,4 @@
     const LayoutGrid = defineAsyncComponent(()=>import('~/components/Layout/Grid.vue'));
     const HomeProjectsExtract = defineAsyncComponent(()=>import('~/components/home/projects/Extract.vue'));
     const HomeProjectsSlider = defineAsyncComponent(()=>import('~/components/home/projects/Slider.vue'));
-
-    defineProps({
-        images:{
-            require:true,
-            type:Array,
-            default:[]
-        }
-    })
 </script>
