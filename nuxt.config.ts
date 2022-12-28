@@ -18,5 +18,10 @@ export default defineNuxtConfig({
         contentful: {
             baseURL:'https://images.ctfassets.net'
         }
+    },
+    runtimeConfig: {
+        public: {
+            urlContacto: process.env.NUXT_URL_CONTACT,
+        }
     }
 })
