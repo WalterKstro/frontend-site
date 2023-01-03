@@ -1,5 +1,5 @@
 <template>
-        <aside class="relative mb-16 lg:mb-24">
+        <aside class="relative mb-16">
             <LayoutContainer>
                     <div class="absolute inset-0 grid" aria-hidden="true">
                         <div class="bg-darken"></div>

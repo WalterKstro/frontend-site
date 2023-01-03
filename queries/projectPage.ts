@@ -1,0 +1,27 @@
+export const projectQuery = gql`
+query{
+  projectsPage(id:"iS366Zpz1LzZozIsrD1pH"){
+    projectsCollection(limit:5){
+      items{
+        title,
+        extract,
+        technologiesCollection{
+          items{
+            technology
+          }
+        },
+        imagesCollection{
+          items{
+            url
+          }
+        }
+        links
+      }
+    },
+    cite{
+      cite,
+      author
+    }
+  }
+}
+`

@@ -29,7 +29,7 @@
 <script setup>
     import { homeQuery } from '../queries/homePage';
 
-    const SectionIntroduction = defineAsyncComponent(()=>import('~/components/home/introduction/SectionIntroduction.vue'));
+    const SectionIntroduction = defineAsyncComponent(()=>import('~/components/home/introduction/SectionIntroduction.vue'))
     const HomeSectionProjects = defineAsyncComponent(()=>import('~/components/home/projects/SectionProjects.vue'));
     const LazyTitle = defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Titles.vue'));
     const LazyExtract = defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Extract.vue'));
@@ -50,4 +50,5 @@
     useHead({
         title:'Inicio'
     })
+
 </script>

@@ -11,7 +11,7 @@
             :modules="[Pagination,Mousewheel]">
             effect="cards"
             <swiper-slide v-for="({url}) in images" :key="url">
-                <nuxt-img provider="contentful" :src="url" placeholder preload loading="lazy"/>
+                <nuxt-img provider="contentful" :src="url" placeholder preload loading="lazy" class="rounded-lg"/>
             </swiper-slide>
         </swiper>
     </div>

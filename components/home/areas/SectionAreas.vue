@@ -1,5 +1,5 @@
 <template>
-    <section class="mb-16 lg:mb-48">
+    <section class="py-16">
         <LayoutContainer>
             <LayoutGrid class="gap-y-4 md:gap-y-6">
                 <h3 class="col-start-1 col-span-2 font-semibold text-dark text-center

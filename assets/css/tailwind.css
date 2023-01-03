@@ -25,4 +25,10 @@
     h3{font-size: var(--font-size-xl);}
     h4{font-size: var(--font-size-lg);}
 }
+@layer components {
+    .bg-section-cite {
+        background: url(https://res.cloudinary.com/dwgtayvuu/image/upload/v1672692249/notebook-bg_am1cpb.png) center right / contain no-repeat,
+        linear-gradient(to right,#FFFFFF, #E2E2E9);
+    }
+}
 .active{@apply text-orange font-semibold}

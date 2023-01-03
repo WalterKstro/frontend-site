@@ -1,5 +1,5 @@
 <template>
-    <section class="py-16 mb-16 bg-dark lg:mb-48">
+    <section class="py-16 bg-dark">
         <LayoutContainer>
             <LayoutGrid class="items-center">
                 <HomeProjectsExtract/>

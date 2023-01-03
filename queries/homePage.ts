@@ -16,8 +16,3 @@ export const homeQuery = gql`
             }
         }
     `
-
-export const contactQuery = gql`
-    mutation addUser ($input: UserInput!) { 
-        addUser (input: $input) {      id    }  
-    }`
