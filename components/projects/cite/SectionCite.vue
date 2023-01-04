@@ -5,15 +5,7 @@
           md:py-16
           lg:py-32">
                 <Grid>
-                    <p class="col-start-1 col-span-2 text-2xl font-semibold
-                    md:col-span-3
-                    lg:col-start-2 lg:col-span-5">
-                        <Icon name="bx:bxs-quote-left" />
-                            {{ cite.cite }}
-                        <Icon name="bxs:quote-right" />
-                    </p>
-                    <p class="col-start-1 col-span-1
-                    lg:col-start-2 lg:col-span-1">{{cite.author}}</p>    
+                    <slot name="cite" :cite="cite"></slot>
                 </Grid>
             </aside>
     </Container>
