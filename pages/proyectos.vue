@@ -8,10 +8,10 @@
 
     setTimeout(()=>{
         cite.value  =   data.value.projectsPage.cite;
-    },500)
-
-
+    },100)
+    
     provide('cite',cite)
+
 
     useHead({
         title:'Proyectos'

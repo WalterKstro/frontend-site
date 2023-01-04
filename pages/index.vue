@@ -19,8 +19,8 @@
         images.value            =   data.value.homePage.imagesCollection.items
         functionsFrontend.value =   data.value.homePage.frontend;
         functionsBackend.value  =   data.value.homePage.backend;
-    },500)
-
+    },100)
+    
     provide('functionsFrontend', functionsFrontend)
     provide('functionsBackend', functionsBackend)
     provide('images', images)
