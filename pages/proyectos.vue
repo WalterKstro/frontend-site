@@ -1,17 +1,18 @@
 <script setup>
     import { projectQuery } from '~/queries/projectPage'
     
-    const ProjectsCiteSectionCite   =   defineAsyncComponent(()=>import('~/components/projects/cite/SectionCite.vue'))
+    const SectionCite               =   defineAsyncComponent(()=>import('~/components/projects/cite/SectionCite.vue'))
+    const SectionProjects           =   defineAsyncComponent(()=>import('~/components/projects/project/SectionProjects.vue'))
     const LazyCite                  =   defineAsyncComponent(()=>import('~/components/skeleton/projects/cite/Cite.vue'))
-    const { data,pending }          =   await useLazyAsyncQuery(projectQuery);
-    const cite = ref({})
-
-    setTimeout(()=>{
-        cite.value  =   data.value.projectsPage.cite;
-    },100)
+    const { data,pending }          =   await useAsyncQuery(projectQuery);
     
-    provide('cite',cite)
+    const cite      =   data.value.projectsPage.cite;
+    const projects  =   data.value.projectsPage.projectsCollection.items;
+    const covers    =   projects.map( ({sys,imagesCollection}) => ({id:sys.id,url:imagesCollection.items[0].url}))
 
+    provide('cite',cite)
+    provide('projects',projects)
+    provide('covers', covers)
 
     useHead({
         title:'Proyectos'
@@ -19,7 +20,7 @@
 </script>
 
 <template>
-        <ProjectsCiteSectionCite>
+        <SectionCite>
             <template #cite v-if="pending">
                 <LazyCite/>
             </template>
@@ -34,5 +35,6 @@
                     <p class="col-start-1 col-span-1
                     lg:col-start-2 lg:col-span-1">{{cite.author}}</p>    
             </template>
-        </ProjectsCiteSectionCite>
+        </SectionCite>
+        <SectionProjects/>
 </template>

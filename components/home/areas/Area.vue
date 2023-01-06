@@ -3,7 +3,7 @@
         <slot name="title"></slot>
         <ul class="list-none">
             <li v-for="item in items" :key="item" class="py-1">
-                <Icon name="material-symbols:check-small" /> {{ item }}
+                <Icon name="bi:check-all"/> {{ item }}
             </li>
         </ul>
     </div>

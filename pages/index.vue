@@ -3,23 +3,21 @@
 
     const SectionIntroduction       =   defineAsyncComponent(()=>import('~/components/home/introduction/SectionIntroduction.vue'))
     const HomeSectionProjects       =   defineAsyncComponent(()=>import('~/components/home/projects/SectionProjects.vue'));
-    const LazyTitle                 =   defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Titles.vue'));
-    const LazyExtract               =   defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Extract.vue'));
     const HomeContactForm           =   defineAsyncComponent(()=>import('~/components/home/contact/Form.vue'));
     const HomeSectionTechnologies   =   defineAsyncComponent(()=>import('~/components/home/introduction/Technologies.vue'));
     const HomeAreasSectionAreas     =   defineAsyncComponent(()=>import('~/components/home/areas/SectionAreas.vue'));
+    const LazyTitle                 =   defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Titles.vue'));
+    const LazyExtract               =   defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Extract.vue'));
 
-    const { data,pending }          =   await useLazyAsyncQuery(homeQuery);
+    const { data,pending }          =   await useAsyncQuery(homeQuery);
     const images                    =   ref([])
     const functionsFrontend         =   ref([])
     const functionsBackend          =   ref([])
     
 
-    setTimeout(()=>{
-        images.value            =   data.value.homePage.imagesCollection.items
-        functionsFrontend.value =   data.value.homePage.frontend;
-        functionsBackend.value  =   data.value.homePage.backend;
-    },100)
+    images.value               =   data.value.homePage.imagesCollection.items
+    functionsFrontend.value    =   data.value.homePage.frontend;
+    functionsBackend.value     =   data.value.homePage.backend;
     
     provide('functionsFrontend', functionsFrontend)
     provide('functionsBackend', functionsBackend)

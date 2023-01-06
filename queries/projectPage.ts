@@ -3,6 +3,9 @@ query{
   projectsPage(id:"iS366Zpz1LzZozIsrD1pH"){
     projectsCollection(limit:5){
       items{
+        sys{
+          id
+        },
         title,
         extract,
         technologiesCollection{
