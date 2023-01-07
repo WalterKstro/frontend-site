@@ -5,5 +5,11 @@
     })
 </script>
 <template>
-    <nuxt-img provider="contentful" :src="url" placeholder preload loading="lazy" class="rounded-lg"/>
+    <nuxt-img 
+        provider="contentful" 
+        :src="url" 
+        placeholder 
+        preload 
+        loading="lazy" 
+        class="rounded-lg cursor-pointer"/>
 </template>

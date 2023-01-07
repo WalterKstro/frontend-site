@@ -3,6 +3,7 @@
     
     const SectionCite               =   defineAsyncComponent(()=>import('~/components/projects/cite/SectionCite.vue'))
     const SectionProjects           =   defineAsyncComponent(()=>import('~/components/projects/project/SectionProjects.vue'))
+    const SectionExercise           =   defineAsyncComponent(()=>import('~/components/projects/exercise/SectionExercise.vue'))
     const LazyCite                  =   defineAsyncComponent(()=>import('~/components/skeleton/projects/cite/Cite.vue'))
     const { data,pending }          =   await useAsyncQuery(projectQuery);
     

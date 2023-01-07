@@ -1,3 +1,12 @@
+<script lang="ts" setup>
+    import HeroBackground from '~/assets/img/hero background.svg';
+
+    const LayoutContainer   =   defineAsyncComponent(()=> import('../../Layout/Container.vue'));
+    const LayoutGrid        =   defineAsyncComponent(()=> import('~/components/Layout/Grid.vue'));
+    
+    
+</script>
+
 <template>
     <section class="py-16 bg-gradient-to-b from-dark to-darken relative
                     md:py-24
@@ -16,11 +25,3 @@
     </section>
 </template>
 
-<script lang="ts" setup>
-    import HeroBackground from '~/assets/img/hero background.svg';
-
-    const LayoutContainer = defineAsyncComponent(()=>import('../../Layout/Container.vue'));
-    const LayoutGrid = defineAsyncComponent(()=>import('~/components/Layout/Grid.vue'));
-    
-    
-</script>

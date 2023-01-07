@@ -1,7 +1,7 @@
 <template>
     <div class="col-start-1 col-span-2
-                md:col-start-1 md:col-span-6
-                lg:col-start-5 lg:col-span-8">
+                md:col-span-6
+                lg:col-span-8">
         <swiper
             :pagination="true"
             :direction="'horizontal'"
