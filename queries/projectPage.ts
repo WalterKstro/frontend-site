@@ -1,7 +1,7 @@
 export const projectQuery = gql`
 query{
   projectsPage(id:"iS366Zpz1LzZozIsrD1pH"){
-    projectsCollection(limit:5){
+    projectsCollection(limit:10){
       items{
         sys{
           id
