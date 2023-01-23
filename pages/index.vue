@@ -10,14 +10,16 @@
     const LazyExtract               =   defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Extract.vue'));
 
     const { data,pending }          =   await useAsyncQuery(homeQuery);
+    const {imagesCollection,frontend,backend} = data.value.homePage
+
     const images                    =   ref([])
     const functionsFrontend         =   ref([])
     const functionsBackend          =   ref([])
     
 
-    images.value               =   data.value.homePage.imagesCollection.items
-    functionsFrontend.value    =   data.value.homePage.frontend;
-    functionsBackend.value     =   data.value.homePage.backend;
+    images.value                    =   imagesCollection.items
+    functionsFrontend.value         =   frontend;
+    functionsBackend.value          =   backend;
     
     provide('functionsFrontend', functionsFrontend)
     provide('functionsBackend', functionsBackend)
