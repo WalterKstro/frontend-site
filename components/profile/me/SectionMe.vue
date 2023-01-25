@@ -21,7 +21,7 @@
                         
                     <div class="text-light col-start-1 col-span-1 row-start-1
                         md:col-start-2 md:col-span-2
-                        lg:col-start-4 lg:col-span-3">
+                        lg:col-start-4 lg:col-span-4">
                         <h3 class="font-semibold">{{me.name}}</h3>
                         <p class="font-semibold">{{me.position}}</p>
                     </div>
