@@ -1,4 +1,5 @@
-<script setup>
+<script lang="ts" setup>
+    import { Home } from '~~/interfaces/HomeInterface';
     import { homeQuery } from '../queries/homePage';
 
     const SectionIntroduction       =   defineAsyncComponent(()=>import('~/components/home/introduction/SectionIntroduction.vue'))
@@ -9,17 +10,13 @@
     const LazyTitle                 =   defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Titles.vue'));
     const LazyExtract               =   defineAsyncComponent(()=>import('~/components/skeleton/home/introduction/Extract.vue'));
 
-    const { data,pending }          =   await useAsyncQuery(homeQuery);
-    const {imagesCollection,frontend,backend} = data.value.homePage
+    const { data,pending }          =   await useAsyncQuery<Home>(homeQuery);
 
-    const images                    =   ref([])
-    const functionsFrontend         =   ref([])
-    const functionsBackend          =   ref([])
+    const images                    =   ref( data.value?.homePage.imagesCollection.items )
+    const functionsFrontend         =   ref( data.value?.homePage.frontend )
+    const functionsBackend          =   ref( data.value?.homePage.backend )
     
 
-    images.value                    =   imagesCollection.items
-    functionsFrontend.value         =   frontend;
-    functionsBackend.value          =   backend;
     
     provide('functionsFrontend', functionsFrontend)
     provide('functionsBackend', functionsBackend)
@@ -28,7 +25,6 @@
     useHead({
         title:'Inicio'
     })
-
 </script>
 
 <template>
@@ -42,15 +38,15 @@
                 <div class="col-span-2 mb-8
                         md:col-span-4
                         lg:col-span-5">
-                <span class="block text-2xl md:text-3xl text-light font-titles font-semibold">{{ data.homePage.greeting }}</span>
+                <span class="block text-2xl md:text-3xl text-light font-titles font-semibold">{{ data?.homePage.greeting }}</span>
                 <h1 class="font-bold text-orange">{{data?.homePage.name}}</h1>
-                <span class="block text-2xl md:text-3xl text-light font-titles font-semibold">{{data.homePage.position}}</span>
+                <span class="block text-2xl md:text-3xl text-light font-titles font-semibold">{{data?.homePage.position}}</span>
             </div>
             </template>
             <template #extract>
                 <div class="col-span-2 mb-4 text-light
                         md:col-span-4
-                        lg:col-span-5 lg:row-start-2"><p>{{ data.homePage.extract }}</p></div>
+                        lg:col-span-5 lg:row-start-2"><p>{{ data?.homePage.extract }}</p></div>
             </template>
         </SectionIntroduction>
 
@@ -58,6 +54,5 @@
         <HomeSectionProjects/>
         <HomeAreasSectionAreas/>
         <HomeContactForm/>
-    
 
 </template>
