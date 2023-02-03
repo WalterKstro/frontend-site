@@ -1,26 +1,30 @@
-<script setup>
+<script lang="ts" setup>
+    import { ImagesCollectionItem, TechnologiesCollectionItem } from '~~/interfaces/ProjectInterface';
+
+
     const Container     =   defineAsyncComponent(()=>import('~/components/Layout/Container.vue'))
     const Grid          =   defineAsyncComponent(()=>import('~/components/Layout/Grid.vue'))
     const Slider        =   defineAsyncComponent(()=>import('~/components/home/projects/Slider.vue'));
-    const showModal     =   inject('showModal')
+    const showModal     =   inject<boolean>('showModal')
 
-    const props = defineProps({
-        title:String,
-        extract:String,
-        technologies: Array,
-        images: Array,
-        links:Array
-    })
+    interface IProps {
+        title:string,
+        extract:string,
+        technologies: TechnologiesCollectionItem[],
+        images: ImagesCollectionItem[],
+        links: string[]
+    }
+    const props = defineProps<IProps>()
     provide('images',props.images)
 </script>
 <template>
-    <aside class="fixed flex top-0 bottom-0 left-0 right-0 bg-darken/90 backdrop-blur-md" @click.self="()=> showModal = false">
+    <aside class="fixed flex top-0 bottom-0 left-0 right-0 bg-dark/90 backdrop-blur-md" @click.self="()=> showModal = false">
         <Container class="m-auto">
             <Grid class="gap-y-4 md:gap-y-6">
                 <Slider/>
                 <div class="flex flex-col justify-between col-start-1 col-span-2 
-                md:col-start-2 md:col-span-4
-                lg:col-start-9 lg:col-span-4">
+                    md:col-start-2 md:col-span-4
+                    lg:col-start-9 lg:col-span-4">
                     <h3 class="text-light font-semibold">{{ title }}</h3>
                     <p class="text-light whitespace-pre-line m-0">{{ extract }}</p>
                     <div class="flex flex-col justify-between sm:flex-row space-y-2 md:space-y-0">

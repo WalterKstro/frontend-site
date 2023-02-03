@@ -1,16 +1,19 @@
-<script setup>
+<script lang="ts" setup>
+
     import { projectQuery } from '~/queries/projectPage'
+    import { Projects } from '../interfaces/ProjectInterface';
     
     const SectionCite               =   defineAsyncComponent(()=>import('~/components/projects/cite/SectionCite.vue'))
     const SectionProjects           =   defineAsyncComponent(()=>import('~/components/projects/project/SectionProjects.vue'))
     const SectionExercise           =   defineAsyncComponent(()=>import('~/components/projects/exercise/SectionExercise.vue'))
     const LazyCite                  =   defineAsyncComponent(()=>import('~/components/skeleton/projects/cite/Cite.vue'))
-    const { data,pending }          =   await useAsyncQuery(projectQuery);
+    const { data,pending }          =   await useAsyncQuery<Projects>(projectQuery);
     
-    const cite      =   data.value.projectsPage.cite;
-    const projects  =   data.value.projectsPage.projectsCollection.items;
-    const covers    =   projects.map( ({sys,imagesCollection}) => ({id:sys.id,url:imagesCollection.items[0].url}))
+    const cite      =   ref( data.value!.projectsPage.cite );
+    const projects  =   ref( data.value!.projectsPage.projectsCollection.items );
+    const covers    =   ref( projects.value?.map( project => ({ id:project.sys.id, url:project.imagesCollection.items[0].url })) )
 
+    
     provide('cite',cite)
     provide('projects',projects)
     provide('covers', covers)

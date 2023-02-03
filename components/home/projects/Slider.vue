@@ -1,3 +1,10 @@
+<script setup>
+    import { Swiper, SwiperSlide } from 'swiper/vue';
+    import {Pagination,Mousewheel} from 'swiper'
+    import 'swiper/css/bundle';
+    const images = inject('images')
+</script>
+
 <template>
     <div class="col-start-1 col-span-2
                 md:col-span-6
@@ -17,10 +24,3 @@
     </div>
 </template>
 
-
-<script setup>
-    import { Swiper, SwiperSlide } from 'swiper/vue';
-    import {Pagination,Mousewheel} from 'swiper'
-    import 'swiper/css/bundle';
-    const images = inject('images')
-</script>

@@ -1,9 +1,12 @@
-<script setup>
-    const props = defineProps({
-        id:String,
-        url:String
-    })
+<script lang="ts" setup>
+
+    interface Props {
+        id:string,
+        url:string
+    }
+    const props = defineProps<Props>()
 </script>
+
 <template>
     <nuxt-img 
         provider="contentful" 
