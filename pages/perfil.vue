@@ -1,17 +1,17 @@
-<script setup>
+<script lang="ts" setup>
+
+    import { Profile } from '../interfaces/ProfileInterface';
     import { profileQuery } from '~~/queries/profilePage';
 
     const SectionMe = defineAsyncComponent(()=>import('~~/components/profile/me/SectionMe.vue'))
     const SectionExperience = defineAsyncComponent(()=>import('~~/components/profile/experience/SectionExperience.vue'))
     const SectionEducation = defineAsyncComponent(()=>import('~~/components/profile/education/SectionEducation.vue'))
     
-    const { data,pending }          =   await useAsyncQuery(profileQuery);
-    const {me,educationsCollection,experiencesCollection} = data.value.profilePage
+    const { data }  =   await useAsyncQuery<Profile>(profileQuery);
 
-
-    provide('me',me)
-    provide('experiences',experiencesCollection)
-    provide('education', educationsCollection)
+    provide('me',data.value!.profilePage.me)
+    provide('experiences',data.value!.profilePage.experiencesCollection)
+    provide('education', data.value!.profilePage.educationsCollection)
     
     useHead({
         title:'Perfil'

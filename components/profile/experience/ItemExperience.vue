@@ -1,11 +1,15 @@
-<script setup>
-    const props = defineProps({
-        company:String,
-        date:String,
-        position:String,
-        functions:Array
-    })
+<script lang="ts" setup>
+    interface Props {
+        position: string;
+        company: string;
+        functions: string[];
+        date: string;
+        __typename: string;
+    }
+    const props = defineProps<Props>()
+
 </script>
+
 <template>
     <li class="ml-8 mb-8 last:mb-0 text-dark">
         <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-2 bg-light ring-dark">

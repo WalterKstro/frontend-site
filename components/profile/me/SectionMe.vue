@@ -1,8 +1,11 @@
-<script setup>
+<script lang="ts" setup>
+
+    import { Me } from '../../../interfaces/ProfileInterface';
+
     const Container = defineAsyncComponent(()=>import('~/components/Layout/Container.vue'))
     const Grid = defineAsyncComponent(()=>import('~/components/Layout/Grid.vue'))
 
-    const me = inject('me')
+    const me = inject<Me>('me') as Me
 </script>
 
 <template>

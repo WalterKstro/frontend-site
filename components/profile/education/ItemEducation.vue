@@ -1,9 +1,10 @@
-<script setup>
-    const props = defineProps({
-        career:String,
-        date:String,
-        institute:String
-    })
+<script lang="ts" setup>
+    interface Props {
+        career: string;
+        institute: string;
+        date: string;
+    }
+    const props = defineProps<Props>()
 </script>
 
 <template>

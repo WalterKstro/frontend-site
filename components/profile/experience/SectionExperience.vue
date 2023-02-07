@@ -1,9 +1,11 @@
-<script setup>
+<script lang="ts" setup>
+    import { ExperiencesCollection } from '../../../interfaces/ProfileInterface';
+
     const Container = defineAsyncComponent(()=>import('~/components/Layout/Container.vue'))
     const Grid = defineAsyncComponent(()=>import('~/components/Layout/Grid.vue'))
     const ItemExperience = defineAsyncComponent(()=>import('~~/components/profile/experience/ItemExperience.vue'))
 
-    const experiences = inject('experiences')
+    const experiences = inject<ExperiencesCollection>('experiences') as ExperiencesCollection
 </script>
 
 <template>
@@ -14,7 +16,7 @@
                     <h3>Experiencia</h3>
                 </SidebarTitle>
                 <TimeLine>
-                    <ItemExperience v-for="(item, index) in experiences.items" :key="index" :="item"/>
+                    <ItemExperience v-for="experience in experiences.items" :key="experience.company" :="experience"/>
                 </TimeLine>
             </Grid>
         </Container>
