@@ -1,8 +1,8 @@
 <script lang="ts" setup>
     import HeroBackground from '~/assets/img/hero background.svg';
 
-    const LayoutContainer   =   defineAsyncComponent(()=> import('../../Layout/Container.vue'));
-    const LayoutGrid        =   defineAsyncComponent(()=> import('~/components/Layout/Grid.vue'));
+    const LayoutContainer   =   defineAsyncComponent(()=> import('../../layout/Container.vue'));
+    const LayoutGrid        =   defineAsyncComponent(()=> import('~/components/layout/Grid.vue'));
     
     
 </script>

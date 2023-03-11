@@ -2,8 +2,8 @@
     import { ImagesCollectionItem, TechnologiesCollectionItem } from '~~/interfaces/ProjectInterface';
 
 
-    const Container     =   defineAsyncComponent(()=>import('~/components/Layout/Container.vue'))
-    const Grid          =   defineAsyncComponent(()=>import('~/components/Layout/Grid.vue'))
+    const Container     =   defineAsyncComponent(()=>import('~/components/layout/Container.vue'))
+    const Grid          =   defineAsyncComponent(()=>import('~/components/layout/Grid.vue'))
     const Slider        =   defineAsyncComponent(()=>import('~/components/home/projects/Slider.vue'));
     const showModal     =   inject<boolean>('showModal')
 

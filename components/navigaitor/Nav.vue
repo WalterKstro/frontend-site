@@ -1,3 +1,13 @@
+<script lang="ts" setup>
+    const brand = defineAsyncComponent(()=>import('./Brand.vue'));
+
+    const itemsMenu = ref([
+        {name:'Inicio',path:{name:'index'}},
+        {name:'Proyectos',path:{name:'proyectos'}},
+        {name:'Perfil',path:{name:'perfil'}},
+    ])
+</script>
+
 <template>
     <nav class="max-w-xs w-full bg-dark absolute top-0 bottom-0 p-4 flex flex-col gap-4
                 md:static md:max-w-none md:p-0 md:flex-row md:gap-12
@@ -13,12 +23,3 @@
         </div>
     </nav>
 </template>
-<script lang="ts" setup>
-    const brand = defineAsyncComponent(()=>import('./Brand.vue'));
-
-    const itemsMenu = ref([
-        {name:'Inicio',path:{name:'index'}},
-        {name:'Proyectos',path:{name:'proyectos'}},
-        {name:'Perfil',path:{name:'perfil'}},
-    ])
-</script>

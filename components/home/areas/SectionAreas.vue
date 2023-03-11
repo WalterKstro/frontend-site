@@ -29,8 +29,8 @@
     </section>
 </template>
 <script setup>
-    const LayoutContainer = defineAsyncComponent(()=>import('~/components/Layout/Container.vue'));
-    const LayoutGrid = defineAsyncComponent(()=>import('~/components/Layout/Grid.vue'));
+    const LayoutContainer = defineAsyncComponent(()=>import('~/components/layout/Container.vue'));
+    const LayoutGrid = defineAsyncComponent(()=>import('~/components/layout/Grid.vue'));
     const Area = defineAsyncComponent(()=>import('~/components/home/areas/Area.vue'));
 
     const functionsFrontend = inject('functionsFrontend');

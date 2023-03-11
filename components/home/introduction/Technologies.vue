@@ -21,5 +21,5 @@
 </template>
 
 <script setup>
-    const LayoutContainer = defineAsyncComponent(()=>import('~/components/Layout/Container.vue'));
+    const LayoutContainer = defineAsyncComponent(()=>import('~/components/layout/Container.vue'));
 </script>

@@ -2,7 +2,7 @@
     import { IProjectSelected } from '~~/interfaces/CustomInterfaces';
     import { ProjectsCollectionItem } from '~~/interfaces/ProjectInterface';
 
-    const Container         =   defineAsyncComponent(()=>import('~/components/Layout/Container.vue'))
+    const Container         =   defineAsyncComponent(()=>import('~/components/layout/Container.vue'))
     const Card              =   defineAsyncComponent(()=>import('~~/components/projects/project/Card.vue'))
     const Modal             =   defineAsyncComponent(()=>import('~~/components/projects/project/Modal.vue'))
 

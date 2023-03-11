@@ -83,8 +83,8 @@
     import axios from 'axios'
     import { reset } from '@formkit/core'
 
-    const LayoutContainer = defineAsyncComponent(()=>import('~/components/Layout/Container.vue'));
-    const LayoutGrid = defineAsyncComponent(()=>import('~/components/Layout/Grid.vue'));
+    const LayoutContainer = defineAsyncComponent(()=>import('~/components/layout/Container.vue'));
+    const LayoutGrid = defineAsyncComponent(()=>import('~/components/layout/Grid.vue'));
     const Spiner = defineAsyncComponent(()=>import('~/components/home/contact/Spiner.vue'));
     const Alert = defineAsyncComponent(()=>import('~/components/home/contact/Alert.vue'));
     

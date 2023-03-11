@@ -1,8 +1,8 @@
 <script lang="ts" setup>
     import { ExperiencesCollection } from '../../../interfaces/ProfileInterface';
 
-    const Container = defineAsyncComponent(()=>import('~/components/Layout/Container.vue'))
-    const Grid = defineAsyncComponent(()=>import('~/components/Layout/Grid.vue'))
+    const Container = defineAsyncComponent(()=>import('~/components/layout/Container.vue'))
+    const Grid = defineAsyncComponent(()=>import('~/components/layout/Grid.vue'))
     const ItemExperience = defineAsyncComponent(()=>import('~~/components/profile/experience/ItemExperience.vue'))
 
     const experiences = inject<ExperiencesCollection>('experiences') as ExperiencesCollection

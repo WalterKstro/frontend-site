@@ -1,6 +1,6 @@
 <script  setup>
-    const Container =   defineAsyncComponent(()=>import('~/components/Layout/Container.vue'))
-    const Grid      =   defineAsyncComponent(()=>import('~/components/Layout/Grid.vue'))
+    const Container =   defineAsyncComponent(()=>import('~/components/layout/Container.vue'))
+    const Grid      =   defineAsyncComponent(()=>import('~/components/layout/Grid.vue'))
 </script>
 <template>
     <Container>
